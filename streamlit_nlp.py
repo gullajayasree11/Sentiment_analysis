@@ -29,7 +29,7 @@ if __name__ == '__main__':
     st.subheader('Give your input below')
     sentence = st.text_area('Enter your text here', height=200)
     predict_btt = st.button('Predict')
-    loaded_model = pickle.load(open('C:/Users/HP/Downloads/sentiment_analysis.p', 'rb')) 
+    loaded_model = pickle.load(open('sentiment_analysis.p', 'rb')) 
 
     if predict_btt:
         a = loaded_model.predict([sentence])[0]
